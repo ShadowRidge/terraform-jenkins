@@ -1,0 +1,13 @@
+
+vi provider.tf
+vi main.tf
+vi variables.tf
+vi securitygroups.tr
+
+vi output.tf
+
+terraform init
+terraform fmt
+terraform plan
+terraform validate
+terraform apply

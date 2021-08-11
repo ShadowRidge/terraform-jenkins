@@ -1,0 +1,41 @@
+Steps: 
+we can build the ec2 instance using terraform and 
+install anythig needed on that instance (in this case a jenkins server)
+
+This can be done from either a Win 10 machine using Git-bash 
+or from any linux machine example ubuntu on AWS or a local VM.
+
+Pre-req is Terraform must be installed on that machine 
+and to execute terraform from anywhere its binaries must be in path folder.
+
+
+create all .tf files needed as shown below
+(on win see files ex: C:\001-G7-2021\projects\terraform\aws-jenkins)
+
+On linux, go to the folder where you created the files on Linux:
+ex:aws-jenkins: 
+ls -la
+vim securitygroups.tf
+ls -la
+
+terraform init
+terraform fmt
+terraform plan
+terraform validate
+terraform apply
+
+At this point terraform would have created a new instance using the above configuration
+-----------------------------------------------------------------------------------------
+
+after logging in to the new instance from another bash-terminal:
+
+    sudo su - 
+    cd /var/log
+    ls -lrt
+    tail -f user-data.log
+this verified the action happened due to user-data
+
+to verify the software installed ex: webserver nginx, or apache or jenkins
+from your host go to the public ip address of the new machine and check the server installed.
+cat /var/lib/jenkins/secrets/initialAdminPassword
+Ex: Jenkins: http://ip-address:8080
