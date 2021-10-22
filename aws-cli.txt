@@ -2,6 +2,7 @@
 ### cli changes for test branch
 ### changes
 ### pull
+###  config
 
 Steps: 
 we can build the ec2 instance using terraform and 
