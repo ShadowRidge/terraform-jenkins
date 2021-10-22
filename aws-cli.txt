@@ -1,7 +1,7 @@
 ### changes has been done for testing only
 ### cli changes for test branch
-###  check please
 ### changes
+
 Steps: 
 we can build the ec2 instance using terraform and 
 install anythig needed on that instance (in this case a jenkins server)
@@ -34,12 +34,13 @@ At this point terraform would have created a new instance using the above config
 after logging in to the new instance from another bash-terminal:
 
     sudo su - 
-    cd /var/log
-    ls -lrt
-    tail -f user-data.log
-this verified the action happened due to user-data
+        cd /var/log
+	    ls -lrt
+	        tail -f user-data.log
+		this verified the action happened due to user-data
 
-to verify the software installed ex: webserver nginx, or apache or jenkins
-from your host go to the public ip address of the new machine and check the server installed.
-cat /var/lib/jenkins/secrets/initialAdminPassword
-Ex: Jenkins: http://ip-address:8080
+		to verify the software installed ex: webserver nginx, or apache or jenkins
+		from your host go to the public ip address of the new machine and check the server installed.
+		cat /var/lib/jenkins/secrets/initialAdminPassword
+		Ex: Jenkins: http://ip-address:8080
+
